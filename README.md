@@ -1,2 +1,2 @@
 # resume
-design &amp; make my resume
+Lwxyfer resume -- lwxyfer.com

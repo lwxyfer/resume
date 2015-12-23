@@ -2,9 +2,213 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>LWXYFER RESUME</title>
+    <link rel="stylesheet" href="jquery.fullpage.css">
+    <style>
+        /* Reset CSS
+         * --------------------------------------- */
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+        form,fieldset,input,textarea,p,blockquote,th,td {
+            padding: 0;
+            margin: 0;
+            font-family:'Microsoft JhengHei', serif;
+        }
+        a{
+            text-decoration:none;
+        }
+        table {
+            border-spacing: 0;
+        }
+        fieldset,img {
+            border: 0;
+        }
+        address,caption,cite,code,dfn,em,strong,th,var {
+            font-weight: normal;
+            font-style: normal;
+        }
+        strong{
+            font-weight: bold;
+        }
+        ol,ul {
+            list-style: none;
+            margin:0;
+            padding:0;
+        }
+        caption,th {
+            text-align: left;
+
+        }
+        q:before,q:after {
+            content:'';
+        }
+        abbr,acronym { border: 0;
+        }
+        /**
+         * custom css
+         */
+        html {
+            font-size:100%;
+        }
+        h1 {
+            font-size:3rem;
+        }
+        .content {
+            width:100%;
+            height:100%;
+            text-align:center;
+            display:flex;
+            display:-webkit-flex;
+            display:-moz-flex;
+            flex-direction: column;
+            -webkit-flex-direction:column;
+            justify-content:center; 
+        }
+        #content4 {
+            display:flex;
+            flex-direction:row;
+            justify-content:center;
+        }
+        #left {
+            width:30%;
+            border:1px solid #0074D9;
+        }
+        #right {
+            width:30%;
+            border:1px solid #01FF70;
+            display:flex;
+            justify-content:space-around;
+            align-content: center;
+            align-items: center;
+/*            flex-direction: row;*/
+            flex-wrap:wrap;
+        }
+        #right img {
+            width:22%;
+
+        }
+
+
+    </style>
 </head>
 <body>
     
+<div id="main">
+    <div class="section" id="section1">
+        <div class="content" id="content1">
+            <h3>-- 个人简历 -- </h3><br>
+            <h1>LWXYFER</h1><br>
+            <h3>WEB前端开发工程师</h3>
+        </div>
+    </div>
+    <div class="section" id="section2">
+        <div class="content" id="content2">           
+            <h1>你好</h1>
+            <img src="http://svgporn.com/logos/angular-icon.svg" alt="">
+            <p>
+                <span>姓氏</span>：<span>刘伟</span><br>
+                兰州大学-核科学与技术学院-核技术<br>
+                外语水平：CET6 <br>
+                妈蛋的没啥写啊。
+            </p>
+        </div>
+    </div>
+    <div class="section" id="section3">
+        <div class="content" id="content3">
+            <h1>技能</h1>
+        </div>
+    </div>
+    <div class="section" id="section4">
+        <div class="content" id="content4">
+            <div id="left">left</div>
+            <div id="right">lazy-load所有的图片，头次会显示所有的图片，给图片加类名，只有有选定类名才出现，其余直接none <br>
+                <img data-src="http://svgporn.com/logos/javascript.svg" alt="">
+                <img data-src="http://svgporn.com/logos/io.svg" alt="">
+                <img data-src="http://svgporn.com/logos/100tb.svg" alt="">
+                <img data-src="http://svgporn.com/logos/angular-icon.svg" alt="">
+                <img data-src="http://svgporn.com/logos/arangodb.svg" alt="">
+                <img data-src="http://svgporn.com/logos/atom.svg" alt="">
+                <img data-src="http://svgporn.com/logos/codecademy.svg" alt="">
+                <img data-src="http://svgporn.com/logos/css-3.svg" alt="">
+                <img data-src="http://svgporn.com/logos/npm.svg" alt="">
+                <img data-src="http://svgporn.com/logos/nodejs-icon.svg" alt="">
+                
+
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section5">
+        <div class="content" id="content5">
+            <div class="content" id="content1">
+            <h1>LWXYFER</h1>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="jquery-2.14.js"></script>
+    <script src="jquery.fullpage.js"></script>
+    <script>
+        $(document).ready(function() {
+    $('#main').fullpage({
+        //Navigation
+        menu: '#menu',
+        lockAnchors: false,
+        anchors:['firstPage', 'secondPage'],
+        navigation: true,
+        navigationPosition: 'right',
+        navigationTooltips: ['Tooltip', 'secondSlide'],
+        showActiveTooltip: true,
+        slidesNavigation: true,
+        slidesNavPosition: 'bottom',
+
+        //Scrolling
+        css3: true,
+        scrollingSpeed: 700,
+        autoScrolling: true,
+        fitToSection: true,
+        fitToSectionDelay: 1000,
+        scrollBar: false,
+        easing: 'easeInOutCubic',
+        easingcss3: 'ease',
+        loopBottom: false,
+        loopTop: false,
+        loopHorizontal: true,
+        continuousVertical: false,
+        normalScrollElements: '#element1, .element2',
+        scrollOverflow: false,
+        touchSensitivity: 15,
+        normalScrollElementTouchThreshold: 5,
+
+        //Accessibility
+        keyboardScrolling: true,
+        animateAnchor: true,
+        recordHistory: true,
+
+        //Design
+        controlArrows: true,
+        verticalCentered: true,
+        resize : false,
+        sectionsColor : ['#fff', 'whitesmoke','#ccc', '#fff','#FF4136'],
+        paddingTop: '3em',
+        paddingBottom: '10px',
+        fixedElements: '#header, .footer',
+        responsiveWidth: 0,
+        responsiveHeight: 0,
+
+        //Custom selectors
+        sectionSelector: '.section',
+        slideSelector: '.slide',
+
+        //events
+        onLeave: function(index, nextIndex, direction){},
+        afterLoad: function(anchorLink, index){},
+        afterRender: function(){},
+        afterResize: function(){},
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+    });
+});
+    </script>
 </body>
 </html>
